@@ -31,10 +31,10 @@ function labur_plugin_options() { // Page design. This function is called in adm
             <?php @do_settings_fields('labur-group'); ?>
             <table class="form-table">
                 <tr valign="top">
-                    <th scope="row"><label for="labur_dashboard_title"><?php echo esc_html(__('API key', 'labur')); ?></label></th>
+                    <th scope="row"><label for="labur_dashboard_title"><?php echo esc_html(__('API key', 'wp-labur')); ?></label></th>
                     <td>
                         <input type="text" name="labur_settings_api_key" id="labur_settings_api_key" value="<?php echo esc_attr(get_option('labur_settings_api_key')); // If a previous value exists, it shows it ?>" />
-                        <br/><small><?php echo esc_html(__('You find the API key in your labur.eus dashboard ', 'labur')); ?><a target="_blank" href="<?php echo esc_url('https://labur.eus/');?>">https://labur.eus/</a></small>
+                        <br/><small><?php echo esc_html(__('You find the API key in your labur.eus dashboard ', 'wp-labur')); ?><a target="_blank" href="<?php echo esc_url('https://labur.eus/');?>">https://labur.eus/</a></small>
                     </td>
                 </tr>
             </table> <?php @submit_button(); ?>

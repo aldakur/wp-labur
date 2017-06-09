@@ -8,7 +8,7 @@ Author: Egoitz Gonzalez
 Author URI: http://www.egoitzgonzalez.com
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.html
-Text Domain: labur
+Text Domain: wp-labur
 Domain Path: /languages
 */
 
@@ -38,7 +38,7 @@ add_filter( "plugin_action_links_$plugin", 'labur_plugin_add_settings_link' ); /
 
 function labur_plugin_load_textdomain() {
 
-	$text_domain	= 'labur';
+	$text_domain	= 'wp-labur';
 	$path_languages = basename(dirname(__FILE__)).'/languages/'; // basename(dirname(__FILE__)) relative url. This function extracts the name of the plugin directory. In this case, Labur.
 
  	load_plugin_textdomain($text_domain, false, $path_languages );

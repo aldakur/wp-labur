@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
   * | Deactive | Settings |
   */
 function labur_plugin_add_settings_link( $links ) {
-    $settings_link = '<a href="options-general.php?page=labur">' . esc_html(__( 'Settings' )) . '</a>';
+    $settings_link = '<a href="options-general.php?page=labur">' . esc_html(__( 'Settings', 'wp-labur' )) . '</a>';
     array_push( $links, $settings_link );
   	return $links;
 }

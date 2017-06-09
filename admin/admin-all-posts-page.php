@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	* labur URL is the new column name
 	*/
 function set_labur_columns_head($defaults) {
-    $defaults['labur_shortened_url'] = __('Labur URL', 'labur');
+    $defaults['labur_shortened_url'] = __('Labur URL', 'wp-labur');
     return $defaults;
 }
 add_filter('manage_posts_columns', 'set_labur_columns_head');

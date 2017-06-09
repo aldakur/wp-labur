@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	*/
 function labur_add_metabox() {
     //doc http://codex.wordpress.org/Function_Reference/add_meta_box
-    add_meta_box('labur_url', esc_html(__('Labur', 'labur')),'labur_url_handler', 'post', 'side', 'high'); // id, title, The function that is executed when creating the box, element type.
+    add_meta_box('labur_url', esc_html(__('Labur', 'wp-labur')),'labur_url_handler', 'post', 'side', 'high'); // id, title, The function that is executed when creating the box, element type.
 }
 add_action('add_meta_boxes', 'labur_add_metabox' );
 
@@ -26,7 +26,7 @@ function labur_url_handler() {
     $post_uri = esc_url(get_post_permalink());
 
     echo '<input type="text" id="labur_shortened_url" name="labur_shortened_url"  value="'.$labur_link.'" readonly />';
-    echo '<p class="submit"><input id="button_labur_get_url" class="button button-primary button-large" name="button_labur_get_url" value="'. esc_html(__('Create labur URL', 'labur')).'" type="button" /></p>';
+    echo '<p class="submit"><input id="button_labur_get_url" class="button button-primary button-large" name="button_labur_get_url" value="'. esc_html(__('Create labur URL', 'wp-labur')).'" type="button" /></p>';
 }
 
 /**
